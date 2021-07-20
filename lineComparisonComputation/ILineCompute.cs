@@ -7,5 +7,6 @@ namespace lineComparisonComputation
     interface ILineCompute
     {
         public abstract void LengthCalc();
+        public abstract void CompareLength();
     }
 }
