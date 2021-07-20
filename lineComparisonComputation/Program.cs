@@ -9,7 +9,8 @@ namespace lineComparisonComputation
             Console.WriteLine("Welcome to Line Comparison Computation Program!");
             ILineCompute line = new LineCompute();
             //line.LengthCalc();
-            line.CompareLength();
+            //line.CompareLength();
+            line.LineCompare();
         }
     }
 }

@@ -8,5 +8,6 @@ namespace lineComparisonComputation
     {
         public abstract void LengthCalc();
         public abstract void CompareLength();
+        public abstract void LineCompare();
     }
 }
