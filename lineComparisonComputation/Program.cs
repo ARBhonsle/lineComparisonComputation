@@ -10,7 +10,6 @@ namespace lineComparisonComputation
             ILineCompute line = new LineCompute();
             //line.LengthCalc();
             //line.CompareLength();
-            line.LineCompare();
         }
     }
 }
