@@ -47,7 +47,7 @@ namespace lineComparisonComputation
                 }
             }else if (x[0].Equals(x[3]) && x[1].Equals(x[2]))
             {
-                if(y[0] == y[3] && y[1] == y[2])
+                if(y[0].Equals(y[3]) && y[1].Equals(y[2]))
                 {
                     Console.WriteLine("Line Equal");
                 }
@@ -58,7 +58,16 @@ namespace lineComparisonComputation
             }
             else
             {
-                Console.WriteLine("Line Length Not Equal");
+                Double lengthLine1 = Math.Sqrt(Math.Pow(x[0] - x[1], 2) + Math.Pow(y[0] - y[1], 2));
+                Double lengthLine2 = Math.Sqrt(Math.Pow(x[2] - x[3], 2) + Math.Pow(y[2] - y[3], 2));
+                if (lengthLine1 != lengthLine2)
+                {
+                    Console.WriteLine("Line Length Not Equal");
+                }
+                else
+                {
+                    Console.WriteLine("Line lengths Equal");
+                }
             }
         }
     }
