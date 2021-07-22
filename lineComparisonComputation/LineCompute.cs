@@ -6,20 +6,17 @@ namespace lineComparisonComputation
 {
     class LineCompute: ILineCompute
     {
+        int[] point = new int[4];
+        public LineCompute(int[] point)
+        {
+            for(int i = 0; i < point.Length; i++)
+            {
+                this.point[i] = point[i];
+            }
+        }
         public void LengthCalc()
         {
-            int[] x = new int[2];
-            int[] y= new int[2];
-            Console.WriteLine("Length calculation between two points in a line");
-            for(int i = 0; i < 2; i++)
-            {
-                Console.WriteLine("Give "+(i+1)+" point coordinate:");
-                Console.WriteLine("X: ");
-                x[i] = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Y: ");
-                y[i] = Convert.ToInt32(Console.ReadLine());
-            }
-            Double lineLength = Math.Sqrt(Math.Pow(x[0] - x[1], 2) + Math.Pow(y[0] - y[1], 2));
+            Double lineLength = Math.Sqrt(Math.Pow(point[0] - point[2], 2) + Math.Pow(point[1] - point[3], 2));
             Console.WriteLine("Length of line (within given points) :"+ lineLength);
         }
         public void CompareLength()
